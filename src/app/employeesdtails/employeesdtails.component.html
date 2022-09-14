@@ -1,0 +1,44 @@
+<h3>Employees Registration and Details</h3>
+<br>
+<br>
+<h4>Employees Registration</h4>
+<br>
+<label>Name of Employee :</label>
+<input type="text" [(ngModel)]="name">
+<br>
+<label>Employee Age :</label>
+<input type="number" [(ngModel)]="age">
+<br>
+<label>Company :</label>
+<input type="text" [(ngModel)]="company">
+<br>
+<label>Package</label>
+<input type="number" [(ngModel)]="package">
+<br>
+<br>
+<button class="btn btn-primary" (click)="add()">Register</button>
+<br>
+<br>
+<button class="btn btn-warning" (click)="packagelowtohigh()">Package Low to High</button>
+<button class="btn btn-warning" (click)="packagehightolow()">Package High to Low</button>
+<table border="2" class="table table-hover">
+    <thead>
+        <tr>
+            <th>Name of Employee</th>
+            <th>Employee Age</th>
+            <th>Company</th>
+            <th>Package</th>
+            <th><button (click)="delete()">Delete All</button></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of employees ; let i= index">
+            <td>{{employee.name}}</td>
+            <td>{{employee.age | age}}</td>
+            <td>{{employee.company}}</td>
+            <td>{{employee.package | package}}</td>
+            <td><button class="btn btn-warning" (click)="remove(i)">Remove</button></td>
+        </tr>
+    </tbody>
+</table>
+

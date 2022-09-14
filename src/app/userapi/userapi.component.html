@@ -1,0 +1,15 @@
+<div class="row">
+    <div id="box" class="col-md-3 col-sm-2 col-sm-1" *ngFor="let user of users">
+    <p><b>ID :</b> {{ user.id }} </p>
+    <p><b>User Name :</b> {{ user.name }} </p>
+    <p><b>Email :</b> {{ user.email }} </p>
+    <hr>
+    <p><b>Address :</b> {{ user.address.street }},<br>Steert :{{ user.address.suite }}, City :{{ user.address.city }} , Zipcode :{{ user.address.zipcode}}</p>
+    <p>Lattitude {{ user.address.geo.lat}} </p>
+    <p>Lnagitude {{ user.address.geo.lng}} </p>
+    <hr>
+    <p><b>Contact Details :</b> {{ user.phone}} </p>
+    <p><b>Website :</b> <a href="{{ user.website}}">{{ user.website}}</a> </p>
+    <p><b>Company :</b> {{ user.company.catchPhrase}} , {{ user.company.name}} , {{ user.company.bs}} </p>
+</div>
+</div>

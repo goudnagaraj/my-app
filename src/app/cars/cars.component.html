@@ -1,0 +1,23 @@
+<h3>Cars Company</h3>
+<br><br>
+<Label><b>Company :</b></Label>
+<input type="radio" name="cars" value="honda" [(ngModel)]="car">
+<label><b>Honda</b></label>
+<input type="radio" name="cars" value="bmw" [(ngModel)]="car">
+<label><b>BMW</b></label>
+<input type="radio" name="cars" value="audi" [(ngModel)]="car">
+<label><b>Audi</b></label>
+<div>
+<div class="c1">
+    <img *ngIf="car=='honda'" src="https://d3s8goeblmpptu.cloudfront.net/mrp/honda/2022/accord/2022-honda-accord_landing-5.jpg" alt="hond img" width="100%" height="100%">
+</div>
+<div class="c2">
+    <img *ngIf="car=='bmw'" src="https://cdn.autoportal.com/img/new-cars-gallery/bmw/7-series/colors/3614815abf20e37faa0e48fe89fab01e.jpg" alt="bmw img" width="100%" height="100%">
+</div>
+<div class="c3">
+<img *ngIf="car=='audi'" src="https://stimg.cardekho.com/images/carexteriorimages/930x620/Audi/A4/8223/1609828510164/grille-97.jpg" alt="audi img" width="100%" height="100%">
+</div>
+</div>
+
+<marquee>{{ message }} </marquee>
+
