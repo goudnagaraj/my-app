@@ -24,6 +24,7 @@
         <th>fuel</th>
         <th>Id</th>
         <th>Actions</th>
+        <th>View</th>
         </tr>
     </thead>
     <tbody>
@@ -35,7 +36,10 @@
             <td>{{ vechicle.type }}</td>
             <td>{{ vechicle.fuel }}</td>
             <td>{{ vechicle.id}}</td>
-            <td><button class="btn btn-danger" (click)="delete(vechicle.id)">Delete</button></td>
+            <td>
+                <button class="btn btn-danger" (click)="delete(vechicle.id)">Delete</button>
+                <button class="btn btn-success" (click)="view(vechicle.id)">View</button>
+            </td>
         </tr>
     </tbody>
 </table>

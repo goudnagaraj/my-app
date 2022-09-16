@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Carapidata } from '../carapidata';
 import { CarapidataService } from '../carapidata.service';
 
@@ -13,7 +14,7 @@ export class CarapidataComponent implements OnInit {
   public column: string = '';
   public order: string = '';
 
-  constructor(private _carapidataService: CarapidataService) {
+  constructor(private _carapidataService: CarapidataService, private router: Router) {
     this._carapidataService.getVehicles().subscribe(
       (data: any) => {
         this.vehicles = data;
@@ -65,5 +66,8 @@ export class CarapidataComponent implements OnInit {
       alert('Deleted successfully!!!!');
       location.reload();
     });
+  }
+  view(id:string){
+    this.router.navigateByUrl('/dashboard/vahicle-details'+'/'+id);
   }
 }

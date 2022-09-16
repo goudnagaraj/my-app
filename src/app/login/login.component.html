@@ -6,7 +6,7 @@
         <br>
         <br>
         <label for="Password">Password :</label><br>
-        <input type="text" placeholder="Password" formControlName="password">
+        <input type="password" placeholder="Password" formControlName="password">
         <div class="error" *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.invalid">
         <p *ngIf="loginForm.get('password')?.errors?.['required']">Password is required</p>
         <p *ngIf="loginForm.get('password')?.errors?.['pattern']">Password should be at least one uppercase, one lowercase, one special charecter , one digit</p>

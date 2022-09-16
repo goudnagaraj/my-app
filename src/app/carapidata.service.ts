@@ -15,6 +15,12 @@ export class CarapidataService {
     );
   }
 
+  getVehicle(id:string): Observable<Carapidata> {
+    return this._httpClient.get<Carapidata>(
+      'https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction'+'/'+id
+    );
+  }
+
   getFilterdVehicles(filterTerm: string): Observable<Carapidata[]> {
     return this._httpClient.get<Carapidata[]>(
       'https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction' +
@@ -33,13 +39,18 @@ export class CarapidataService {
 
   getSortedVehicles(column: string, order: string): Observable<Carapidata[]> {
     return this._httpClient.get<Carapidata[]>(
-      'https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction' +'?sortBy='+column+'&order=' + order
+      'https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction' +
+        '?sortBy=' +
+        column +
+        '&order=' +
+        order
     );
   }
 
-  createvehicle(vehicle: Carapidata ): Observable<Carapidata>{
+  createvehicle(vehicle: Carapidata): Observable<Carapidata> {
     return this._httpClient.post<Carapidata>(
-      'https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction', vehicle
+      'https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction',
+      vehicle
     );
   }
 

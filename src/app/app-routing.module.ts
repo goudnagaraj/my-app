@@ -8,6 +8,7 @@ import { CarapidataComponent } from './carapidata/carapidata.component';
 import { CarsComponent } from './cars/cars.component';
 import { CartComponent } from './cart/cart.component';
 import { Cart2Component } from './cart2/cart2.component';
+import { CartlistComponent } from './cartlist/cartlist.component';
 import { ComponentsComponent } from './components/components.component';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { CreatevehicleComponent } from './createvehicle/createvehicle.component';
@@ -21,13 +22,17 @@ import { ItemscartComponent } from './itemscart/itemscart.component';
 import { LayoutsComponent } from './layouts/layouts.component';
 import { LoginComponent } from './login/login.component';
 import { MailserviceComponent } from './mailservice/mailservice.component';
+import { NavComponent } from './nav/nav.component';
 import { NotifyGuard } from './notify.guard';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { ParentComponent } from './parent/parent.component';
 import { PipesComponent } from './pipes/pipes.component';
+import { ProductComponent } from './product/product.component';
 import { RectangularComponent } from './rectangular/rectangular.component';
 import { SquareComponent } from './square/square.component';
 import { TwowaybindingComponent } from './twowaybinding/twowaybinding.component';
 import { UserapiComponent } from './userapi/userapi.component';
+import { VahicleDetailsComponent } from './vahicle-details/vahicle-details.component';
 
 const routes: Routes = [
   {path: 'login',component: LoginComponent},
@@ -54,7 +59,12 @@ const routes: Routes = [
     {path: 'mailservice', component: MailserviceComponent},
     {path: 'userapi', component: UserapiComponent},
     {path: 'createvehicle', component: CreatevehicleComponent, canDeactivate: [NotifyGuard]},
-    {path: 'create-user', component: CreateUserComponent}
+    {path: 'create-user', component: CreateUserComponent},
+    {path: 'parent', component: ParentComponent},
+    {path: 'product', component: ProductComponent},
+    {path: 'nav', component: NavComponent},
+    {path: 'cartlist', component: CartlistComponent},
+    {path:'vahicle-details/:id', component: VahicleDetailsComponent}
   ],
 },
   {path: '',component: LoginComponent},
